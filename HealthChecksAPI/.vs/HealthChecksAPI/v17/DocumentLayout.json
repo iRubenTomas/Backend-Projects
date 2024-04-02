@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ruben Tomas\\Desktop\\Backend-Projects\\HealthChecksAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F18C4C9F-BD1C-40FF-8F64-BF594C6A219A}|HealthChecksAPI.csproj|c:\\users\\ruben tomas\\desktop\\backend-projects\\healthchecksapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18C4C9F-BD1C-40FF-8F64-BF594C6A219A}|HealthChecksAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18C4C9F-BD1C-40FF-8F64-BF594C6A219A}|HealthChecksAPI.csproj|c:\\users\\ruben tomas\\desktop\\backend-projects\\healthchecksapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F18C4C9F-BD1C-40FF-8F64-BF594C6A219A}|HealthChecksAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18C4C9F-BD1C-40FF-8F64-BF594C6A219A}|HealthChecksAPI.csproj|c:\\users\\ruben tomas\\desktop\\backend-projects\\healthchecksapi\\health\\healthcheckcustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18C4C9F-BD1C-40FF-8F64-BF594C6A219A}|HealthChecksAPI.csproj|solutionrelative:health\\healthcheckcustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18C4C9F-BD1C-40FF-8F64-BF594C6A219A}|HealthChecksAPI.csproj|c:\\users\\ruben tomas\\desktop\\backend-projects\\healthchecksapi\\healthchecksapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F18C4C9F-BD1C-40FF-8F64-BF594C6A219A}|HealthChecksAPI.csproj|solutionrelative:healthchecksapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Ruben Tomas\\Desktop\\Backend-Projects\\HealthChecksAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Ruben Tomas\\Desktop\\Backend-Projects\\HealthChecksAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-02T16:00:15.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HealthChecksAPI.http",
+              "DocumentMoniker": "C:\\Users\\Ruben Tomas\\Desktop\\Backend-Projects\\HealthChecksAPI\\HealthChecksAPI.http",
+              "RelativeDocumentMoniker": "HealthChecksAPI.http",
+              "ToolTip": "C:\\Users\\Ruben Tomas\\Desktop\\Backend-Projects\\HealthChecksAPI\\HealthChecksAPI.http",
+              "RelativeToolTip": "HealthChecksAPI.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-04-02T15:52:24.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ruben Tomas\\Desktop\\Backend-Projects\\HealthChecksAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Ruben Tomas\\Desktop\\Backend-Projects\\HealthChecksAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T15:44:35.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HealthCheckCustom.cs",
+              "DocumentMoniker": "C:\\Users\\Ruben Tomas\\Desktop\\Backend-Projects\\HealthChecksAPI\\Health\\HealthCheckCustom.cs",
+              "RelativeDocumentMoniker": "Health\\HealthCheckCustom.cs",
+              "ToolTip": "C:\\Users\\Ruben Tomas\\Desktop\\Backend-Projects\\HealthChecksAPI\\Health\\HealthCheckCustom.cs",
+              "RelativeToolTip": "Health\\HealthCheckCustom.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T15:27:59.85Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
