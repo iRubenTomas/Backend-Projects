@@ -1,0 +1,6 @@
+@ExploreTheProgramCsFile_HostAddress = http://localhost:5135
+
+GET {{ExploreTheProgramCsFile_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
