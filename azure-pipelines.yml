@@ -1,19 +1,103 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+variables:
+  buildConfiguration: 'Release'
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+stages:
+- stage: Build
+  displayName: 'Build Stage'
+  jobs:
+  - job: Build
+    displayName: 'Build Job'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: UseDotNet@2
+      inputs:
+        packageType: 'sdk'
+        version: '5.x'
+        installationPath: $(Agent.ToolsDirectory)/dotnet
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'restore'
+        projects: '**/*.csproj'
+
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'build'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration)'
+
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'publish'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+
+- stage: DeployDev
+  displayName: 'Deploy to Development'
+  dependsOn: Build
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  jobs:
+  - deployment: Deploy
+    displayName: 'Deploy to Development Environment'
+    environment: 'Development'
+    pool:
+      vmImage: 'ubuntu-latest'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: drop
+
+          - task: UseDotNet@2
+            inputs:
+              packageType: 'sdk'
+              version: '5.x'
+              installationPath: $(Agent.ToolsDirectory)/dotnet
+
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: 'YourAzureSubscription'
+              appType: 'webApp'
+              appName: 'your-dev-app-service-name'
+              package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+
+- stage: DeployProd
+  displayName: 'Deploy to Production'
+  dependsOn: Build
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  jobs:
+  - deployment: Deploy
+    displayName: 'Deploy to Production Environment'
+    environment: 'Production'
+    pool:
+      vmImage: 'ubuntu-latest'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: drop
+
+          - task: UseDotNet@2
+            inputs:
+              packageType: 'sdk'
+              version: '5.x'
+              installationPath: $(Agent.ToolsDirectory)/dotnet
+
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: 'YourAzureSubscription'
+              appType: 'webApp'
+              appName: 'your-prod-app-service-name'
+              package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+
