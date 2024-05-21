@@ -66,7 +66,7 @@ stages:
 
           - task: AzureWebApp@1
             inputs:
-              azureSubscription: 'YourAzureSubscription'
+              azureSubscription: 'AzureConnection'
               appType: 'webApp'
               appName: 'your-dev-app-service-name'
               package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
@@ -96,7 +96,7 @@ stages:
 
           - task: AzureWebApp@1
             inputs:
-              azureSubscription: 'YourAzureSubscription'
+              azureSubscription: 'AzureConnection'
               appType: 'webApp'
               appName: 'your-prod-app-service-name'
               package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
